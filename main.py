@@ -1,3 +1,8 @@
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'  # Suppress TensorFlow informational messages
+
+# Import other necessary modules and code for your Flask app
+
 from flask import render_template
 from flask import Flask, request, jsonify
 import numpy as np
