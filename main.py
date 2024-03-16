@@ -6,11 +6,8 @@ from sklearn.preprocessing import StandardScaler
 
 app = Flask(__name__)
 
-path="C:/Users/4nm20/Desktop/4n/"
-
-
 # Load the trained model
-model = tf.keras.models.load_model(f"{path}/front.h5")
+model = tf.keras.models.load_model(f"front.h5")
 
 # Load or define your scaler
 scaler = StandardScaler()
@@ -18,7 +15,7 @@ scaler = StandardScaler()
 labels = ['Anodic', 'Cathodic', 'Corrosion']
 
 # Load or define X_train
-X_train = np.load("C:/Users/4nm20/Desktop/4n/X_train.npy") 
+X_train = np.load("X_train.npy") 
 # Fit the scaler on the training data
 scaler.fit_transform(X_train)
 
